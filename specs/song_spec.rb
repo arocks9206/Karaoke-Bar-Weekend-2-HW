@@ -7,15 +7,15 @@ require_relative ("../song")
 class SongTest < Minitest::Test
 
   def setup()
-    @song = Song.new("Love Shack", "The B-52's")
+    @song = Song.new("Uptown Girl", "Billy Joel")
   end
 
   def test_song_name()
-    assert_equal("Love Shack", @song.name())
+    assert_equal("Uptown Girl", @song.name())
   end
 
   def test_artist_has_name()
-    assert_equal("The B-52's", @song.artist())
+    assert_equal("Billy Joel", @song.artist())
   end
 
 

@@ -8,10 +8,10 @@ class CustomerTest < Minitest::Test
 
 def setup()
 
-  @customer_1 = Customer.new("Jerry", "Uptown Girl")
-  @customer_2 = Customer.new("George", "Achey Breaky Heart")
-  @customer_3 = Customer.new("Elaine", "Dancing Queen")
-  @customer_4 = Customer.new("Kramer", "I Believe In A Thing Called Love")
+  @customer_1 = Customer.new("Jerry", "Uptown Girl", 40)
+  @customer_2 = Customer.new("George", "Love Shack", 25)
+  @customer_3 = Customer.new("Elaine", "Dancing Queen", 30)
+  @customer_4 = Customer.new("Kramer", "Start Me Up", 15)
 
 end
 
@@ -20,7 +20,11 @@ def test_customer_has_name()
 end
 
 def test_customer_favorite_song()
-  assert_equal("I Believe In A Thing Called Love", @customer_4.favorite_song())
+  assert_equal("Start Me Up", @customer_4.favorite_song())
+end
+
+def test_customer_has_cash()
+  assert_equal(30, @customer_3.cash())
 end
 
 
